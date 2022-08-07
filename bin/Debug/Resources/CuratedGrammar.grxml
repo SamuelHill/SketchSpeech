@@ -1,0 +1,3052 @@
+﻿<grammar xmlns="http://www.w3.org/2001/06/grammar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/06/grammar          http://www.w3.org/TR/speech-grammar/grammar.xsd" xml:lang="en-US" version="1.0" tag-format="semantics-ms/1.0" root="Top">
+  <rule id="Top">
+    <one-of>
+      <item>
+        <ruleref uri="#Question" />
+      </item>
+      <item>
+        <ruleref uri="#Greeting" />
+      </item>
+      <item>
+        <ruleref uri="#WrapUp" />
+      </item>
+      <item>
+        <ruleref uri="#Interjection" />
+      </item>
+      <item>
+        <ruleref uri="#Command" />
+      </item>
+      <!-- 
+      <item>
+        <ruleref uri="#EasterEggs" />
+      </item>
+      -->
+    </one-of>
+  </rule>
+  <!-- mark -->
+  <rule id="Question">
+    <one-of>
+      <item weight="10"><ruleref uri="#AreQuestion" /></item>
+      <item weight="9"><ruleref uri="#DidQuestion" /></item>
+      <item weight="9"><ruleref uri="#DoesQuestion" /></item>
+      <item weight="10"><ruleref uri="#HasQuestion" /></item>
+      <item weight="10"><ruleref uri="#IsQuestion" /></item>
+      <item weight="10"><ruleref uri="#Inquisition" /></item>
+      <item weight="10"><ruleref uri="#InquisitionOrder" /></item>
+      <item weight="10"><ruleref uri="#HowQuestion" /></item>
+      <item weight="10"><ruleref uri="#WhatQuestion" /></item>
+      <item weight="10"><ruleref uri="#WhenQuestion" /></item>
+      <item weight="10"><ruleref uri="#WhereQuestion" /></item>
+      <item weight="10"><ruleref uri="#WhichQuestion" /></item>
+      <item weight="10"><ruleref uri="#WhoQuestion" /></item>
+      <item weight="10"><ruleref uri="#WillQuestion" /></item>
+    </one-of>
+  </rule>
+  <!-- mark -->
+  <rule id="AreQuestion">
+    Are there
+    <item>
+      <item repeat="0-1">
+        any
+        <one-of>
+          <item>good</item>
+          <item>short</item>
+        </one-of>
+      </item>
+      <ruleref uri="#PluralFreeToAttendEventCategory" />
+      <item repeat="0-1">
+        <ruleref uri="#PresentOrFutureTemporalReference"/>
+      </item>
+    </item><item repeat="0-1">
+      <one-of>
+        <item>
+          <ruleref uri="#DurationComparison" />
+        </item>
+        <item>
+          that are <ruleref uri="#DurationComparison" />
+        </item>
+        <item>that are short</item>
+        <item>that I should go to</item>
+      </one-of>
+    </item><item repeat="0-1">
+      <ruleref uri="#TemporalReference" />
+    </item>
+  </rule>
+  <rule id="DidQuestion">
+    Did
+    <ruleref uri="#PersonReference" />
+    go to
+    <ruleref uri="#School" /><item repeat="0-1">
+      for
+      <item repeat="0-1">
+        <ruleref uri="#PossessivePronoun" />
+      </item><ruleref uri="#DegreeLevel" />
+    </item>
+  </rule>
+  <rule id="DoesQuestion">
+    Does
+    <one-of>
+      <item>
+        <ruleref uri="#PresentOrFutureTemporalReference" />'s
+        <one-of>
+          <item>
+            <ruleref uri="#EventName" />
+          </item>
+          <item>
+            <ruleref uri="#Course" />
+          </item>
+        </one-of>
+        meet
+        <item repeat="0-1">in the usual place</item>
+      </item>
+      <item>
+        <one-of>
+          <item>
+            <ruleref uri="#EventName" />
+          </item>
+          <item>
+            <ruleref uri="#Course" />
+          </item>
+        </one-of>
+        meet
+        <one-of>
+          <item><ruleref uri="#PresentOrFutureTemporalReference" /></item>
+          <item>
+            on<ruleref uri="#Date" />
+          </item>
+          <item>
+            <one-of>
+              <item>on</item>
+              <item>this</item>
+              <item>next</item>
+            </one-of>
+            <ruleref uri="#DayOfTheWeek" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#FacultyPostdocTitledName" />
+        <one-of>
+          <item>
+            do research in
+            <ruleref uri="#AcademicDiscipline" />
+          </item>
+          <item>
+            teach
+            <ruleref uri="#Course" /><item repeat="0-1">
+              <ruleref uri="#QuarterReference" />
+            </item>
+          </item>
+          <item>have an office here</item>
+          <item>work here</item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#EventName" />start now
+      </item>
+    </one-of>
+  </rule>
+  <rule id="HasQuestion">
+    <item>
+      Has
+      <ruleref uri="#PersonReference" />
+      listed his
+      <ruleref uri="#Email" />
+    </item>
+  </rule>
+  <rule id="IsQuestion">
+    Is
+    <one-of>
+      <item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+        <one-of>
+          <item>
+            hosted by<ruleref uri="#PersonReference" />
+          </item>
+          <item>
+            <ruleref uri="#DurationComparison" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+        still
+        <one-of>
+          <item>happening</item>
+          <item>going on</item>
+          <item>on</item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />at<ruleref uri="#TimeStamp" />
+      </item>
+      <item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />in<ruleref uri="#Place" />
+      </item>
+      <item>
+        <ruleref uri="#FacultyPostdocReference" />
+        <one-of>
+          <item>
+            <ruleref uri="#EnglishArticle" />
+            <ruleref uri="#AcademicDiscipline" />
+            <one-of>
+              <item>faculty</item>
+              <item>professor</item>
+            </one-of>
+          </item>
+          <item>
+            in
+            <item repeat="0-1">the</item><ruleref uri="#AcademicDiscipline" /><item repeat="0-1">group</item>
+          </item>
+          <item>
+            teaching
+            <item repeat="0-1">the</item><ruleref uri="#Course" /><ruleref uri="#QuarterReference" />
+          </item>
+          <item>
+            an
+            <ruleref uri="#Alumn" />
+            of
+            <ruleref uri="#School" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#PersonReference" />
+        <one-of>
+          <item>
+            's office
+            <one-of>
+              <item>
+                <one-of>
+                  <item>in</item>
+                  <item>on</item>
+                </one-of>
+                <ruleref uri="#SingularSpecificPlace" />
+              </item>
+              <item>
+                <ruleref uri="#LocationReference" />
+              </item>
+            </one-of>
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#School" />
+        where
+        <ruleref uri="#PersonReference" /><one-of>
+          <item>
+            <item>got</item>
+            <ruleref uri="#PossessivePronoun" />
+            <ruleref uri="#DegreeLevel" />
+          </item>
+          <item>
+            went <item repeat="0-1">to</item>for<ruleref uri="#SchoolLevel" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        there
+        <one-of>
+          <item>
+            <ruleref uri="#SingularImmobileObjectOfInterest"/>
+            <item repeat="0-1">around here</item>
+          </item>
+          <item>
+            <one-of>
+              <item>
+                <one-of>
+                  <item>an</item>
+                  <item>any</item>
+                </one-of>
+                <ruleref uri="#Email"/>
+              </item>
+              <item>
+                <one-of>
+                  <item>a</item>
+                  <item>any</item>
+                </one-of>
+                <ruleref uri="#PhoneNumber"/>
+              </item>
+            </one-of>
+            of
+            <ruleref uri="#PersonReference" /><item repeat="0-1">available</item>
+          </item>
+          <item>
+            <one-of>
+              <item>an invited talk</item>
+              <item>a talk</item>
+              <item>any <ruleref uri="#SingularFreeToAttendEventCategory" /></item>
+            </one-of>
+            <ruleref uri="#PresentOrFutureTemporalReference"/>
+          </item>
+          <item>
+            <item repeat="0-1">a</item>
+            <one-of>
+              <item>discussion session</item>
+              <item>recital</item>
+              <item>TA office hour</item>
+            </one-of>
+            for
+            <ruleref uri="#CourseMaybeTemporallyStampped" />
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Inquisition">
+    <one-of>
+      <item>
+        <ruleref uri="#InquiryStarter" />
+        <one-of>
+          <item><ruleref uri="#ObjectInquiryContent" /></item>
+          <item><ruleref uri="#PersonInquiryContentRelativeClauses" /></item>
+        </one-of>        
+      </item>
+      <item>Can you show the <ruleref uri="#SingularImmobileObjectOfInterest"/> to me</item>
+    </one-of>    
+  </rule>
+  <rule id="HowQuestion">
+    How
+    <one-of>
+      <item>
+        is
+        <one-of>
+          <item>the weather <item repeat="0-1">like</item> 
+            <item><ruleref uri="#PresentTemporalReference"/></item>            
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <one-of>
+          <item>do</item>
+          <item>can</item>
+          <item>could</item>
+          <item>may</item>
+        </one-of>
+        <one-of>
+          <item>I</item>
+          <item>We</item>
+        </one-of>
+        <one-of>
+          <item>get to</item>
+          <item>find</item>
+          <item>reach</item>
+        </one-of>
+        <ruleref uri="#LocationOrPerson" />
+      </item>
+      <item>
+        long is
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+      </item>
+      <item>
+        many <ruleref uri="#PluralFreeToAttendEventCategory" /> are
+        <item repeat="0-1">there</item><ruleref uri="#TemporalReference" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="WhatQuestion">
+    What
+    <one-of>
+      <item>time <ruleref uri="#TimeQueryContent"/></item>
+      <item>day is it today</item>
+      <item>
+        is
+        <one-of>
+          <item>the 
+            <one-of>
+              <item>date</item>
+              <item>day</item>
+            </one-of>today
+          </item>
+          <item>
+            the weather like 
+            <item repeat="0-1">
+              <ruleref uri="#PresentOrFutureTemporalReference"/>
+            </item>
+          </item>
+          <item>your name</item>
+          <item>going on today</item>
+          <item>
+            <ruleref uri="#ObjectPossessedByPerson" />
+          </item>
+          <item>
+            the time for
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+          </item>
+          <item>
+            the purpose of
+            <one-of>
+              <item>
+                <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+              </item>
+              <item>this event</item>
+            </one-of>
+          </item>
+          <item>
+            <ruleref uri="#TemporalReference" />'s
+            event schedule
+          </item>
+          <item>
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+            about
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#PluralFreeToAttendEventCategory" /> 
+        are<item repeat="0-1">available</item>
+        <ruleref uri="#PresentOrFutureTemporalReference"/>
+      </item>
+      <item>
+        <ruleref uri="#SingularFreeToAttendEventCategory" />
+        is<item repeat="0-1">available</item>
+        <ruleref uri="#PresentOrFutureTemporalReference"/>
+      </item>
+      <item>
+        <one-of>
+          <item>can</item>
+          <item>do</item>
+        </one-of>
+        you 
+        <one-of>
+          <item>answer</item>
+          <item>do</item>
+          <item>know</item>
+        </one-of>
+      </item>
+      <item>
+        <item repeat="0-1">
+          <one-of>
+            <item>else</item>
+            <item>more</item>
+            <item>other things</item>
+          </one-of>
+        </item>
+        can you do
+      </item>
+      <item>kind of 
+        <one-of>
+          <item>question</item>
+          <item>questions</item>
+        </one-of>
+        <one-of>
+          <item>can</item>
+          <item>do</item>
+        </one-of>you answer
+      </item>      
+    </one-of>
+  </rule>
+  <rule id="TimeQueryContent">
+    <one-of>
+      <item weight="10">
+        is
+        <one-of>
+          <item weight="20">
+            <ruleref uri="#Courses_id" />
+          </item>
+          <item weight="10">
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+          </item>
+          <item weight="9">
+            <item repeat="0-1">the next</item>
+            <one-of>
+              <item>
+                <ruleref uri="#Shuttle" />
+              </item>
+              <item>
+                <ruleref uri="#RecurringEventName" />
+              </item>
+            </one-of>
+          </item>
+          <item>
+            <one-of>
+              <item>
+                the <ruleref uri="#SingularOfficeHour" />
+              </item>
+              <item>
+                <ruleref uri="#Course" />'s office hour
+              </item>
+            </one-of>
+            <item repeat="0-1">
+              <ruleref uri="#PresentOrFutureTemporalReference" />
+            </item>
+          </item>
+        </one-of>
+      </item>
+      <item weight="2">
+        does <ruleref uri="#Course" /> meet
+      </item>
+      <item weight="1">
+        should I go to <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+      </item>
+      <item weight="1">
+        will
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" /><one-of>
+          <item>start</item>
+          <item>end</item>
+        </one-of>
+      </item>
+      <item weight="10">
+        are
+        <one-of>
+          <item weight="10">
+            the
+            <ruleref uri="#PluralGenericEvents"/>
+          </item>
+          <item weight="1">
+            the next <ruleref uri="#PluralFreeToAttendEventCategory" />
+          </item>
+          <item>
+            <one-of>
+              <item>
+                the <ruleref uri="#PluralOfficeHours" />
+              </item>
+              <item>
+                <ruleref uri="#Course" />'s office hours
+              </item>
+            </one-of>
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="WhenQuestion">
+    When <ruleref uri="#TimeQueryContent"></ruleref>
+  </rule>
+  <rule id="WhereQuestion">
+    Where
+    <one-of>
+      <item>
+        <one-of>
+          <item>would</item>
+          <item>can</item>
+          <item>could</item>
+        </one-of>
+        I 
+        <one-of>
+          <item>take
+            <one-of>
+              <item>a shower</item>
+              <item>a nap</item>
+            </one-of>
+          </item>
+          <item>
+            find
+            <one-of>
+              <item>
+                <ruleref uri="#ObjectPossessedByPerson" />
+              </item>
+              <item>
+                <ruleref uri="#LocationOrPerson" />
+              </item>
+              <item>
+                <ruleref uri="#ObjectsOfInterest" />
+              </item>
+            </one-of>
+          </item>
+          <item>
+            <one-of>
+              <item>get</item>
+              <item>buy</item>
+            </one-of>
+            <ruleref uri="#ObjectsOfInterest" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        is
+        <one-of>
+          <item>
+            <item repeat="0-1">the</item>
+            <ruleref uri="#SingularImmobileObjectOfInterest" />
+          </item>
+          <item weight="2">
+            <ruleref uri="#LocationOrPerson" />
+          </item>
+          <item weight="1">
+            <ruleref uri="#ObjectPossessedByPerson" />
+          </item>
+          <item weight="1">
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+            <item repeat="0-1">going to take place</item>
+          </item>
+          <item>
+            <item repeat="0-1">
+              <ruleref uri="#EnglishArticle" />
+            </item>
+            <ruleref uri="#ObjectCanBePossessed" />
+            for
+            <ruleref uri="#PersonReference" />
+          </item>
+          <item weight="10">
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+          </item>
+          <item>
+            <one-of>
+              <item>everyone</item>
+              <item>everybody</item>
+            </one-of>
+          </item>
+        </one-of>
+      </item>
+      <item>
+        are
+        <one-of>
+          <item>the<ruleref uri="#PluralImmobileObjectsOfInterest" /></item>
+          <item><ruleref uri="#PluralSpecificPlaces" /></item>          
+        </one-of>
+      </item>
+      <item>
+        did
+        <one-of>
+          <item><ruleref uri="#FemalePersonReference" />get her<ruleref uri="#DegreeLevel" /></item>
+          <item><ruleref uri="#MalePersonReference" />get his<ruleref uri="#DegreeLevel" /></item>
+        </one-of>        
+      </item>
+      <item>
+        does
+        <one-of>
+          <item>
+            <ruleref uri="#SingularEventMaybeTemporallyStampped" />meet
+          </item>
+          <item>
+            <ruleref uri="#PersonReference" /> work
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="WhichQuestion">
+    <item>
+      Which
+      <one-of>
+        <item>
+          <ruleref uri="#Email" />
+          of
+          <ruleref uri="#PersonReference" />
+          do you have
+        </item>
+        <item>
+          <one-of>
+            <item>
+              <item repeat="0-1">
+                graduate
+              </item>
+              students are
+            </item>
+            <item>professors are</item>
+            <item>faculties are</item>
+          </one-of>
+          in
+          <ruleref uri="#AcademicDiscipline" /><item repeat="0-1">group</item>
+        </item>
+        <item>
+          days are <ruleref uri="#Course" /><item repeat="0-1">offered</item>
+        </item>
+        <item>
+          group is <ruleref uri="#PersonReference" /> in
+        </item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="WhoQuestion">
+    <one-of>
+      <item>
+        Who
+        <one-of>
+          <item>teaches <ruleref uri="#Course" /></item>
+          <item>
+            are
+            <one-of>
+              <item>
+                  <ruleref uri="#AcademicDiscipline" />
+                  <one-of>
+                    <item>professors</item>
+                    <item>faculties</item>
+                  </one-of>
+              </item>
+              <item>
+                in <ruleref uri="#AcademicDiscipline" />
+              </item>
+              <item>you</item>
+            </one-of>
+          </item>
+          <item>
+            is
+            <one-of>
+              <item><ruleref uri="#PersonReference" /></item>
+              <item><ruleref uri="#SingularEventMaybeTemporallyStampped" /> for</item>
+              <item>
+                teaching
+                <one-of>
+                  <item>
+                    <ruleref uri="#Course" />
+                    <item repeat="0-1">
+                      <ruleref uri="#QuarterReference" />
+                    </item>
+                  </item>
+                  <item>
+                    the introduction class in the <ruleref uri="#AcademicDiscipline" /> track
+                  </item>
+                </one-of>
+              </item>
+              <item>
+                hosting <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+              </item>
+              <item>
+                in <ruleref uri="#AcademicDiscipline" />
+              </item>
+              <item>
+                <item repeat="0-1">the name of</item>
+                the professor for <ruleref uri="#Course" /><item repeat="0-1">
+                  <ruleref uri="#QuarterReference" />
+                </item>
+              </item>
+            </one-of>
+          </item>
+          <item>
+            does
+            <one-of>
+              <item>
+                <one-of>
+                  <item>work</item>
+                  <item>research</item>
+                </one-of>
+                in <ruleref uri="#AcademicDiscipline" />
+              </item>
+              <item>
+                <ruleref uri="#AcademicDiscipline" /> research
+              </item>
+            </one-of>
+          </item>
+          <item>
+            can teach me some knowledge of <ruleref uri="#AcademicDiscipline" />
+          </item>
+          <item>
+            should I talk with to get more information of
+            <item repeat="0-1">the</item><ruleref uri="#SingularEventMaybeTemporallyStampped" />
+          </item>
+          <item>
+            works in 
+            <item repeat="0-1">the</item>
+            <ruleref uri="#AcademicDiscipline" />
+            <item repeat="0-1">group</item>
+          </item>
+        </one-of>
+      </item>
+      <item>
+        Whose class should I take to
+        <one-of>
+          <item>
+            learn some introduction information of <ruleref uri="#AcademicDiscipline" />
+          </item>
+          <item>
+            learn some introductory information of <ruleref uri="#AcademicDiscipline" />
+          </item>
+          <item>
+            get an introduction of <ruleref uri="#AcademicDiscipline" />
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="WillQuestion">
+    Will
+    <one-of>
+      <item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+        be
+        <one-of>
+          <item>
+            <ruleref uri="#Duration" />
+          </item>
+          <item>
+            <ruleref uri="#DurationComparison" />
+          </item>
+          <item>long</item>
+          <item>short</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="EnglishArticle">
+    <one-of>
+      <item>a</item>
+      <item>an</item>
+      <item>any</item>
+      <item>the</item>
+    </one-of>
+  </rule>
+  <rule id="ThingsOfInterest">
+    <one-of>
+      <item>
+        <ruleref uri="#ObjectsOfInterest" />
+      </item>
+      <item>
+        <ruleref uri="#LocationOrPerson" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="LocationOrPerson">
+    <one-of>
+      <item weight="1">
+        <ruleref uri="#PersonReference" />
+      </item>
+      <item weight="10">
+        <ruleref uri="#SingularSpecificPlace" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Alumn">
+    <one-of>
+      <item>alumn</item>
+      <item>alumnus</item>
+      <item>alumni</item>
+    </one-of>
+  </rule>
+  <rule id="School">
+    <one-of>
+      <item>
+        <one-of>
+          <item>Northwestern</item>
+          <item>Carnegie Mellon</item>
+          <item>Tufts</item>
+        </one-of>
+        <item repeat="0-1">University</item>
+      </item>
+      <item>Massechusetts Institute of Technology</item>
+      <item>MIT</item>
+      <item>CMU</item>
+    </one-of>
+  </rule>
+  <rule id="Date">
+    <one-of>
+      <item>
+        <ruleref uri="#Month31Days" />
+        <ruleref uri="#OrdinalFor31days" />
+      </item>
+      <item>
+        February
+        <one-of>
+          <item>
+            <ruleref uri="#OrdinalFor28days"/>
+          </item>
+          <item>
+            <ruleref uri="#OrdinalFor29days"/>
+          </item>
+        </one-of>
+      </item>
+      <item>
+        <ruleref uri="#Month30Days" />
+        <ruleref uri="#OrdinalFor30days" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Month">
+    <one-of>
+      <item><ruleref uri="#Month31Days" /></item>
+      <item>February</item>
+      <item><ruleref uri="#Month30Days" /></item>
+    </one-of>
+  </rule>
+  
+  <rule id="Month31Days">
+    <one-of>
+      <item>January</item>
+      <item>March</item>
+      <item>May</item>
+      <item>July</item>
+      <item>August</item>
+      <item>October</item>
+      <item>December</item>
+    </one-of>
+  </rule>
+
+  <rule id="Month30Days">
+    <one-of>
+      <item>April</item>
+      <item>June</item>
+      <item>September</item>
+      <item>November</item>
+    </one-of>
+  </rule>
+  
+  <rule id="DayOfTheWeek">
+    <one-of>
+      <item>Monday</item>
+      <item>Tuesday</item>
+      <item>Wednesday</item>
+      <item>Thursday</item>
+      <item>Friday</item>
+      <item>Saturday</item>
+      <item>Sunday</item>
+    </one-of>
+  </rule>
+  <rule id="OrdinalFor28days">
+    <one-of>
+      <item>
+        <ruleref uri="#OrdinalNumberFirstToNinth" />
+      </item>
+      <item>
+        <ruleref uri="#OrdinalNumberEleventhToNinteenth" />
+      </item>
+      <item>
+        <one-of>
+          <item>tenth</item>
+          <item>twentieth</item>
+          <item>thirtieth</item>
+        </one-of>
+      </item>
+      <item>
+        <item>twenty</item>
+        <ruleref uri="#OrdinalNumberFirstToNinth" />
+      </item>
+      <item>
+        <item>thirty first</item>
+      </item>
+    </one-of>
+  </rule>
+
+  <rule id="OrdinalFor29days">
+    <one-of><item><ruleref uri="#OrdinalFor28days" /></item><item>twenty ninth</item></one-of>
+  </rule>
+
+  <rule id="OrdinalFor30days">
+    <one-of><item><ruleref uri="#OrdinalFor29days" /></item><item>thirtieth</item></one-of>
+  </rule>
+
+  <rule id="OrdinalFor31days">
+    <one-of><item><ruleref uri="#OrdinalFor30days" /></item><item>thirty first</item></one-of>
+  </rule>
+
+  <rule id="OrdinalNumberFirstToNinth">
+    <one-of>
+      <item>first</item>
+      <item>second</item>
+      <item>third</item>
+      <item>fourth</item>
+      <item>fifth</item>
+      <item>sixth</item>
+      <item>seventh</item>
+      <item>eighth</item>
+      <item>ninth</item>
+    </one-of>
+  </rule>
+  <rule id="OrdinalNumberEleventhToNinteenth">
+    <one-of>
+      <item>eleventh</item>
+      <item>twelfth</item>
+      <item>thirteenth</item>
+      <item>fourteenth</item>
+      <item>fifteenth</item>
+      <item>sixteenth</item>
+      <item>seventeenth</item>
+      <item>eighteenth</item>
+      <item>nineteenth</item>
+    </one-of>
+  </rule>
+  <rule id="OrdinalNumberTenths">
+    <one-of>
+      <item>tenth</item>
+      <item>twentieth</item>
+      <item>thirtieth</item>
+      <item>fortieth</item>
+      <item>fiftieth</item>
+      <item>sixtieth</item>
+      <item>seventieth</item>
+      <item>eightieth</item>
+      <item>ninetieth</item>
+    </one-of>
+  </rule>
+  <rule id="SchoolLevel">
+    <one-of>
+      <item>graduate school</item>
+      <item>college</item>
+    </one-of>
+  </rule>
+  <rule id="DegreeLevel">
+    <one-of>
+      <item>PhD</item>
+      <item>PhD Degree</item>
+      <item>Master's Degree</item>
+      <item>Bachelor's Degree</item>
+    </one-of>
+  </rule>
+  <rule id="TimeStamp">
+    <item>
+      <ruleref uri="#OneToTwentyThree" />
+      <item repeat="0-1">
+        <one-of>
+          <item>o'clock</item>
+          <item>o'five</item>
+          <item>fifteen</item>
+          <item>thirty</item>
+          <item>fourty five</item>
+        </one-of>
+      </item>
+      <item repeat="0-1">
+        <one-of>
+          <item>am</item>
+          <item>pm</item>
+        </one-of>
+      </item>
+    </item>
+  </rule>
+  <rule id="QuarterReference">
+    <one-of>
+      <item>this quarter</item>
+      <item>next quarter</item>
+      <item>
+        <item repeat="0-1">
+          <one-of>
+            <item>this</item>
+            <item>next</item>
+          </one-of>
+        </item>
+        <item>fall quarter</item>
+        <item>winter quarter</item>
+        <item>spring quarter</item>
+        <item>summar quarter</item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="ObjectCanBePossessed">
+    <one-of>
+      <item>office</item>
+      <item>desk</item>
+      <item>
+        <ruleref uri="#Email" />
+      </item>
+      <item>
+        <ruleref uri="#Homepage" />
+      </item>
+      <item>
+        office
+        <one-of>
+          <item>hour</item>
+          <item>hours</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="ObjectPossessedByPerson">
+    <one-of>
+      <item>
+        <ruleref uri="#PersonReference" />'s
+        <ruleref uri="#ObjectCanBePossessed" />
+      </item>
+      <item>
+        the
+        <ruleref uri="#ObjectCanBePossessed" />
+        of
+        <ruleref uri="#PersonReference" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Email">
+    email
+    <item repeat="0-1">address</item>
+  </rule>
+  <rule id="PhoneNumber">
+    <one-of>
+      <item>
+        <item repeat="0-1">
+          <one-of>
+            <item>telephone</item>
+            <item>phone</item>
+          </one-of>
+        </item>
+        number
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Homepage">
+    <one-of>
+      <item>webpage</item>
+      <item>website</item>
+      <item>homepage</item>
+    </one-of>
+    <item repeat="0-1"> address</item>
+  </rule>
+  <rule id="Place">
+    <one-of>
+      <item>
+        <ruleref uri="#LocationReference" />
+      </item>
+      <item>
+        <ruleref uri="#SingularSpecificPlace" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="LocationReference">
+    <one-of>
+      <item>here</item>
+      <item>there</item>
+      <item>this building</item>
+      <item>this floor</item>
+    </one-of>
+  </rule>
+  <rule id="Labs">
+    <one-of>
+      <item>QRG Lab</item>
+      <item>Qualitative Reasoning Group</item>
+      <item>Aqua Lab</item>
+      <item>Assistive And Rehabilitation Robotics Laboratory</item>
+      <item>Assistive And Rehabilitation Robotics Lab</item>
+      <item>Campanoni Lab</item>
+      <item>Center For Connected Learning And Computer-based Modeling</item>
+      <item>Delta Lab</item>
+      <item>Economics Group</item>
+      <item>Image And Video Processing Laboratory</item>
+      <item>Image And Video Processing Lab</item>
+      <item>Intelligent Information Laboratory</item>
+      <item>Intelligent Information Lab</item>
+      <item>Interactive Audio Lab</item>
+      <item>Internet And Security Lab</item>
+      <item>Northwestern Lab For Internet And Security Technology</item>
+      <item>Networks Group</item>
+      <item>Northwestern Networks Group</item>
+      <item>Parallel Architecture Group At Northwestern</item>
+      <item>Parallel Architecture Group</item>
+      <item>Prescience Lab</item>
+      <item>Swarm Robotics Lab</item>
+    </one-of>
+  </rule>
+  <rule id="PluralSpecificPlaces">
+    <one-of>
+      <item>the stairs</item>
+      <item>the emergency exits</item>
+    </one-of>
+  </rule>
+  <rule id="SingularSpecificPlace">
+    <one-of>
+      <item>
+        <item repeat="0-1">Mudd</item>
+        <ruleref uri="#OfficeNumber" />
+      </item>
+      <item>
+        <ruleref uri="#Labs" />
+      </item>
+      <item>
+        <item repeat="0-1">the</item>
+        <one-of>
+          <item><ruleref uri="#FemaleFacultyLastName"/></item>
+          <item><ruleref uri="#MaleFacultyLastName"/></item>
+        </one-of>
+        lab
+      </item>
+      <item>
+        Room <ruleref uri="#OfficeNumber" />
+      </item>
+      <item weight="2">the seminar room</item>
+      <item weight="2">the front desk</item>
+      <item weight="2">the kitchen</item>
+      <item weight="2">the emergency exit</item>
+      <item weight="2">an empty room</item>
+      <item weight="2">a study room</item>
+      <item weight="100">
+        <ruleref uri="#PersonReference" />'s
+        <one-of>
+          <item>office</item>
+          <item>desk</item>
+        </one-of>
+      </item>
+      <item weight="30">
+        <item repeat="0-1">
+          <ruleref uri="#EnglishArticle" />
+        </item>
+        <item repeat="0-1">
+          <one-of>
+            <item>men's</item>
+            <item>women's</item>
+          </one-of>
+        </item>
+        <one-of>
+          <item>bathroom</item>
+          <item>restroom</item>
+          <item>toilet</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Duration">
+    <one-of>
+      <item>thirty minutes</item>
+      <item>forty five minutes</item>
+      <item>an hour</item>
+      <item>an hour and a half</item>
+      <item>two hours</item>
+      <item>three hours</item>
+      <item>
+        <item repeat="0-1">
+          <one-of>
+            <item>a</item>
+            <item>a whole</item>
+            <item>an entire</item>
+          </one-of>
+        </item>
+        day
+      </item>
+    </one-of>
+  </rule>
+  <rule id="DurationComparison">
+    <item repeat="0-1">
+      <one-of>
+        <item>at least</item>
+        <item>no more than</item>
+        <item>less than</item>
+        <item>more than</item>
+        <item>shorter than</item>
+        <item>longer than</item>
+        <item>only</item>
+      </one-of>
+    </item>
+    <ruleref uri="#Duration" />
+    <item repeat="0-1">
+      <one-of>
+        <item>or less</item>
+        <item>or more</item>
+        <item>or longer</item>
+        <item>only</item>
+        <item>long</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="AcademicDiscipline">
+    <one-of>
+      <item>Cognitive Systems</item>
+      <item>Artificial Intelligence</item>
+      <item>AI</item>
+      <item>Machine Learning</item>
+      <item>Solid State and Photonics</item>
+      <item>Photonics</item>
+      <item>Computer Engineering and Systems</item>
+      <item>Computer Engineering</item>
+      <item>Systems</item>
+      <item>Graphics and Interactive Media</item>
+      <item>Interactive Media</item>
+      <item>Graphics</item>
+      <item>Signals and Systems</item>
+      <item>Computing Algorithms and Applications</item>
+      <item>Theory</item>
+      <item>Theories</item>
+      <item>Algorithms</item>
+      <item>Security</item>
+    </one-of>
+  </rule>
+  <rule id="PresentOrFutureTemporalReference">
+    <one-of>
+      <item><ruleref uri="#PresentTemporalReference" /></item>
+      <item><ruleref uri="#FutureTemporalReference" /></item>
+    </one-of>
+  </rule>
+  <rule id="PresentTemporalReference">
+    <one-of>
+      <item>today</item>
+    </one-of>
+  </rule>
+  <rule id="PastTemporalReference">
+    <one-of>
+      <item>yesterday</item>
+      <item>the day before yesterday</item>
+    </one-of>
+  </rule>
+  <rule id="FutureTemporalReference">
+    <one-of>
+      <item>tomorrow</item>
+      <item>the day after tomorrow</item>
+      <item>later this week</item>
+      <item>
+        <one-of>
+          <item>this</item>
+          <item>next</item>
+          <item>this coming</item>
+        </one-of>
+        <one-of>
+          <item><ruleref uri="#DayOfTheWeek" /></item>
+          <item>week</item>
+          <item>weekend</item>
+        </one-of>
+      </item>
+      <item>
+        on
+        <item repeat="0-1">
+          <one-of>
+            <item>this</item>
+            <item>next</item>
+            <item>this coming</item>
+          </one-of>
+        </item>
+        <ruleref uri="#DayOfTheWeek" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="CenteredAroundDateTemporalReference">
+    <one-of>
+      <item><ruleref uri="#Date" /></item>
+      <item>the week of<ruleref uri="#Date" /></item>
+      <item>the <ruleref uri="#DayOfTheWeek" /> of<ruleref uri="#Date" /></item>
+    </one-of>
+  </rule>
+  <rule id="IntraDayTemporalReference">
+    <!-- Currently unused -->
+    <one-of>
+      <item>
+        this 
+        <one-of>
+          <item>morning</item>
+          <item>afternoon</item>
+          <item>evening</item>
+        </one-of>
+      </item>
+      <item>
+        in the
+        <one-of>
+          <item>morning</item>
+          <item>afternoon</item>
+          <item>evening</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="TemporalReference">
+    <one-of>
+      <item><ruleref uri="#PresentTemporalReference" /></item>
+      <item><ruleref uri="#PastTemporalReference" /></item>
+      <item><ruleref uri="#FutureTemporalReference" /></item>
+      <item><ruleref uri="#CenteredAroundDateTemporalReference" /></item>
+    </one-of>
+  </rule>
+  <rule id="SingularEventMaybeTemporallyStampped">
+    <one-of>
+      <item weight="5">
+        <item repeat="0-1"><ruleref uri="#TemporalReference" />'s</item>
+        <one-of>
+          <item><ruleref uri="#Course" /></item>
+          <item><ruleref uri="#RecurringEventName" /></item>
+        </one-of>
+      </item>
+      <item weight="15">
+        <item repeat="0-1">the</item>
+        <one-of>
+          <item weight="20">
+            <ruleref uri="#Course" />
+          </item>
+          <item weight="10">
+            <ruleref uri="#EventName" />
+          </item>
+        </one-of>
+        <item repeat="0-1"><ruleref uri="#TemporalReference" /></item>
+      </item>
+      <item weight="10">
+        <one-of>
+          <item>
+            <ruleref uri="#EventName" />
+          </item>
+          <item>
+            <ruleref uri="#RecurringEventWithSpecialName" />
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="CourseMaybeTemporallyStampped">
+    <one-of>
+      <item weight="1">
+        <item repeat="0-1">
+          <ruleref uri="#PresentOrFutureTemporalReference"/>'s
+        </item>
+        <ruleref uri="#Course" />
+      </item>
+      <item weight="1">
+        <item repeat="0-1">the</item>
+        <ruleref uri="#Course" />
+        <ruleref uri="#PresentOrFutureTemporalReference"/>
+      </item>
+      <item weight="1">
+        <item repeat="0-1">the</item>
+        <ruleref uri="#Course" />
+        <one-of>
+          <item>
+            on 
+            <one-of>
+              <item><ruleref uri="#Date" /></item>
+              <item><ruleref uri="#DayOfTheWeek" /></item>
+            </one-of>
+          </item>
+          <item>of <ruleref uri="#TemporalReference" /></item>
+          <item>for <ruleref uri="#TemporalReference" /></item>
+        </one-of>        
+      </item>
+    </one-of>
+  </rule>
+  <rule id="EventName">
+    <one-of>
+      <item>
+        <ruleref uri="#OneTimeEvent" />
+      </item>
+      <item weight="2">
+        <ruleref uri="#RecurringEventName" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="RecurringEventName">
+    <one-of>
+      <item weight="1">
+        <ruleref uri="#SingularGenericEvent" />
+      </item>
+      <item weight="2">
+        <ruleref uri="#RecurringEventWithSpecialName" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="OneTimeEvent">
+    <one-of>
+      <item>The Art and Science of Picasso's Blues</item>
+      <item>Economic Thinking of Communication Networks</item>
+      <item>CS Barbecue</item>
+      <item>Hank Willis Thomas: Unbranded</item>
+      <item>Wildcats, Cubs and Giants at AT&amp;T Park</item>
+    </one-of>
+  </rule>
+  <rule id="RecurringEventWithSpecialName">
+    <one-of>
+      <item>QRG Lunch</item>
+      <item>CS+X Seminar</item>
+      <item>Dean's Seminar Series</item>
+      <item>Algorithm Coffee</item>
+      <item>faculty meeting</item>
+      <item>
+        <item repeat="0-1">EECS</item>
+        <item repeat="0-1">Free</item>
+        Bagel, Coffee, and Tea
+      </item>  
+      <item>
+        <item repeat="0-1">EECS</item>
+        <item repeat="0-1">Free</item>
+        Bagel and Coffee
+      </item>
+    </one-of>
+  </rule>    
+  <rule id="SingularGenericEvent">
+    <one-of>
+      <item>
+        the  
+        <one-of>
+          <item>CS</item>
+          <item><ruleref uri="#AcademicDiscipline" /></item>
+        </one-of>
+        <ruleref uri="#SingularEventCategory" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="PluralGenericEvents">
+    <one-of>
+      <item>
+        the
+        <one-of>
+          <item>CS</item>
+          <item>
+            <ruleref uri="#AcademicDiscipline" />
+          </item>
+        </one-of>
+        <ruleref uri="#PluralEventCategory" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="EventCategory">
+    <one-of>
+      <item><ruleref uri="#SingularEventCategory" /></item>
+      <item><ruleref uri="#PluralEventCategory" /></item>
+    </one-of>
+  </rule>
+  <rule id="SingularFreeToAttendEventCategory">
+    <one-of>
+      <item>invited talk</item>
+      <item>talk</item>
+      <item>lecture</item>
+      <item>discussion session</item>
+      <item>hackathon</item>
+      <item>colloquium</item>
+      <item>coffee</item>
+      <item>seminar</item>
+      <item>class</item>
+      <item>event</item>
+      <item>presentation</item>
+    </one-of>
+  </rule>
+  <rule id="SingularEventCategory">
+    <one-of>
+      <item><ruleref uri="#SingularFreeToAttendEventCategory" /></item>
+      <item>discussion</item>
+      <item>meeting</item>
+      <item>brown bag</item>
+      <item>lunch</item>
+      <item>luncheon</item>
+      <item>poster 
+        <one-of>
+          <item>session</item>
+          <item>fair</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="PluralFreeToAttendEventCategory">
+    <one-of>
+      <item>invited talks</item>
+      <item>talks</item>
+      <item>lectures</item>
+      <item>discussion sessions</item>
+      <item>colloquia</item>
+      <item>coffees</item>
+      <item>seminars</item>
+      <item>classes</item>
+      <item>events</item>
+      <item>presentations</item>
+    </one-of>
+  </rule>
+  <rule id="PluralEventCategory">
+    <one-of>
+      <item><ruleref uri="#PluralFreeToAttendEventCategory" /></item>
+      <item>discussions</item>
+      <item>meetings</item>
+      <item>lunches</item>
+      <item>brown bags</item>
+    </one-of>
+  </rule>
+  <rule id="OfficeHours">
+    <one-of>
+      <item><ruleref uri="#SingularOfficeHour" /></item>
+      <item><ruleref uri="#PluralOfficeHours" /></item>
+    </one-of>
+    <item repeat="0-1">
+      <one-of>
+        <item>of</item>
+        <item>for</item>
+      </one-of>
+      <ruleref uri="#Course" />
+    </item>
+  </rule>
+  <rule id="SingularOfficeHour">
+    <one-of>
+      <item weight="10">
+        <ruleref uri="#Course" /> office hour
+      </item>
+      <item weight="1">
+        office hour 
+        <one-of><item>for</item><item>of</item></one-of>
+        <ruleref uri="#Course" />
+      </item>
+      <item weight="5">
+        <ruleref uri="#FacultyPostdocReference" /> 's office hour
+      </item>
+      <item weight="1">
+        office hour<one-of><item>for</item><item>of</item></one-of><ruleref uri="#FacultyPostdocReference" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="PluralOfficeHours">
+    <one-of>
+      <item weight="10">
+        <ruleref uri="#Course" /> office hours
+      </item>
+      <item weight="1">
+        office hours<one-of><item>for</item><item>of</item></one-of><ruleref uri="#Course" />
+      </item>
+      <item weight="5">
+        <ruleref uri="#FacultyPostdocReference" /> 's office hours
+      </item>
+      <item weight="1">
+        office hours<one-of><item>for</item><item>of</item></one-of><ruleref uri="#FacultyPostdocReference" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Course">
+    <one-of>
+      <item weight="5">
+        <ruleref uri="#Courses_name" />
+      </item>
+      <item weight="20">
+        <ruleref uri="#Courses_id" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Courses_name">
+    <one-of>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1">COG SCI</item>207</item>Introduction to Cognitive Modeling</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1">COG SCI</item>207</item>Intro to Cognitive Modeling</item>
+      <item weight="9"><item repeat="0-1"><item repeat="0-1">DTC</item>106</item>Design, Thinking, and Communication</item>
+      <item weight="9"><item repeat="0-1"><item repeat="0-1">General Engineering</item>205</item>Engineering Analysis</item>
+      <item weight="9"><item repeat="0-1"><item repeat="0-1">GEN ENG</item>205</item>Engineering Analysis</item>
+      <item weight="9"><item repeat="0-1"><item repeat="0-1">EA 1</item>205</item>Engineering Analysis</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>101</item>Computer Science: Concepts, Philosophy, and Connections</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>110</item>Introduction to Computer Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>213</item>Introduction to Computer Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>301</item>Introduction to Robotics Laboratory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>331</item>Introduction to Computational Photography</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>332</item>Introduction to Computer Vision</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>335</item>Introduction to the Theory of Computation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>339</item>Introduction to Databases</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>340</item>Introduction to Computer Networking</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>348</item>Introduction to Artificial Intelligence</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>350</item>Introduction to Computer Security</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>351-1</item>Introduction to Computer Graphics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>356</item>Introduction to Formal Verification</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>358</item>Introduction to Parallel Computing</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Introduction to Computational Learning Theory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Introduction to Computational Learning Theory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Introduction to Database Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Introduction to Computational Linguistics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>111</item>Fundamentals of Computer Programming 1</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>130</item>Tools and Technology of the World Wide Web</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>205</item>Fundamentals of Computer System Software</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>211</item>Fundamentals of Computer Programming 2</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>212</item>Mathematical Foundations of Computer Science</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>214</item>Data Structures and Data Management</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>230</item>Programming for Engineers</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>295</item>Intensive Program Design</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>295</item>Fundamentals of Computer Programming 1.5</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>313</item>Tangible Interaction Design and Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>413</item>Tangible Interaction Design and Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>314</item>Technology and Human Interaction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>315</item>Design, Technology, and Research</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Design, Technology, and Research</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>321</item>Programming Languages</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>322</item>Compiler Construction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>325</item>Artificial Intelligence Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>330</item>Human Computer Interaction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>336</item>Design and Analysis of Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>337</item>Semantic Information Processing</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>338</item>Practicum in Intelligent Information Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>343</item>Operating Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>344</item>Design of Problem Solvers</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>345</item>Distributed Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>349</item>Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>351-2</item>Intermediate Computer Graphics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>352</item>Machine Perception of Music and Audio</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>354</item>Network Penetration and Security</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>361</item>Computer Architecture 1</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>362</item>Computer Architecture Project</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>368</item>Programming Massively Parallel Processors with CUDA</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>468</item>Programming Massively Parallel Processors with CUDA</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>370</item>Computer Game Design</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>371</item>Knowledge Representation and Reasoning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>372</item>Designing and Constructing Models with Multi-Agent Languages</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>472</item>Designing and Constructing Models with Multi-Agent Languages</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>375</item>Machine Learning: Foundations, Applications, and Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>475</item>Machine Learning: Foundations, Applications, and Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>375</item>Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>475</item>Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>394</item>Software Project Management and Development</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Economics and Computation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395-20</item>Data as Art</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Advanced Compiler Hacking</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Advanced Compiler Hacking</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Advanced Topics in Computer Architecture</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Advanced Topics in Computer Architecture</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Algorithmic DNA Self-Assembly Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Algorithmic DNA Self-Assembly Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>DNA Self-Assembly Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>DNA Self-Assembly Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Algorithmic and Economic Aspects of Social Networks</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Algorithmic and Economic Aspects of Social Networks</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Algorithmic Techniques for Bioinformatics Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Algorithmic Techniques for Bioinformatics Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Cognitive Simulation for Virtual Characters</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Cognitive Simulation for Virtual Characters</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Building Next-Generation AI Applications with IBM Watson</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Building Next-Generation AI Applications with IBM Watson</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Collaboration Technology</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Collaboration Technology</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Computational Auditory Scene Analysis</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Computational Auditory Scene Analysis</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Human-level Artificial Intelligence</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Human-level Artificial Intelligence</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Mobile Apps and Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Mobile Apps and Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Object-Oriented Languages and Environments</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Object-Oriented Languages and Environments</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Web Information Retrieval and Extraction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Web Information Retrieval and Extraction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Optimization Techniques for Machine Learning and Deep Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Optimization Techniques for Machine Learning and Deep Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Deep Learning Foundations from Scratch</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Deep Learning Foundations from Scratch</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Platforms and Networked Markets</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Platforms and Networked Markets</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>376</item>Game Design and Development</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Special Topics in Game AI - Logic Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Special Topics in Game AI - Logic Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Special Topics in Game AI</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Special Topics in Game AI</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Logic Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Logic Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Companion Cognitive System Studio</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Companion Cognitive System Studio</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>323</item>Code Analysis and Transformation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Computational Geometry</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Computational Geometry</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Data Science Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Data Science Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Special Topics in Swarms and Multi-robot Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Special Topics in Swarms and Multi-robot Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Swarms and Multi-robot Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Swarms and Multi-robot Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Quadrotor Design and Control</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Quadrotor Design and Control</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Systems Programming in Rust</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Systems Programming in Rust</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Programming Languages Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Programming Languages Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Randomized Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Randomized Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Affective Computing Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Affective Computing Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Type Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Type Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Multi-Modal Analytics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Multi-Modal Analytics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Operational Semantics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Operational Semantics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Conversational Interfaces</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Conversational Interfaces</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>Statistical Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Statistical Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Digital Luthier</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Software Construction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Software Construction</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Computational Photography Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Computational Photography Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Game Development Studio</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Game Development Studio</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Advanced Topics in Compilers</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Advanced Topics in Compilers</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Digital Forensics and Incident Response</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Digital Forensics and Incident Response</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Innovation in Journalism and Technology</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Innovation in Journalism and Technology</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Social Computing and Crowd Sourcing</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Social Computing and Crowd Sourcing</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Inclusive Making</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Inclusive Making</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Internet-scale Experimentation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Internet-scale Experimentation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Algorithms and Society</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Algorithms and Society</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Wireless and Mobile Health</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Wireless and Mobile Health</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>mHealth</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>mHealth</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Innovation Lab: Building Technologies for the Law</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Innovation Lab: Building Technologies for the Law</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Advanced Multimodal Interfaces and Analytics Research</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Advanced Multimodal Interfaces and Analytics Research</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>Computing and Socioeconomic Mobility</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Computing and Socioeconomic Mobility</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>422</item>Random Processes in Communications and Control 1</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>423</item>Random Processes in Communications and Control 2</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>428</item>Information Theory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>430</item>Design of Interactive Learning Environments</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>435</item>Deep Reinforcement Learning from Scratch</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>440</item>Advanced Networking</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>441</item>Resource Virtualization</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>442</item>Dynamic Behavior of Applications, Hosts, and Networks</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>443</item>Advanced Operating Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>446</item>Kernel and Other Low-level Software Development</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>450</item>Internet Security</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>452</item>Advanced Computer Architecture 1</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>455</item>Distributed Computing Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>457</item>Advanced Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>469</item>Machine Learning and Artificial Intelligence for Robotics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>472</item>Designing and Constructing Models with Multi-Agent Languages</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>473-1</item>NUvention: Web and Media</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>473-2</item>NUvention: Web and Media</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>474</item>Probabilistic Graphical Models</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Machine Learning and Artificial Intelligence for Robotics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Intensive Program Design</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>The Design of Technological Tools for Thinking and Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Computational Complexity</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Topics in Theoretical Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Theoretical Machine Learning</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Graduate Algorithms</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Seminar in Statistical Language Modeling</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Distributed Systems in Challenging Environments</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Computational Auditory Scene Analysis</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>Mechanism Design</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>Rapid Prototyping for Software Innovation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>510</item>Social Media Mining</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>512</item>Parallelism Seminar</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>110</item>Intro to Computer Programming</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>213</item>Intro to Computer Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>301</item>Intro to Robotics Laboratory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>331</item>Intro to Computational Photography</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>332</item>Intro to Computer Vision</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>335</item>Intro to the Theory of Computation</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>339</item>Intro to Databases</item>
+      <item weight="9"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>340</item>Intro to Computer Networking</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>348</item>Intro to Artificial Intelligence</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>348</item>Introduction to AI</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>348</item>Intro to AI</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>350</item>Intro to Computer Security</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>351-1</item>Intro to Computer Graphics</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>356</item>Intro to Formal Verification</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>358</item>Intro to Parallel Computing</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>Intro to Computational Learning Theory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Intro to Computational Learning Theory</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Intro to Database Systems</item>
+      <item weight="10"><item repeat="0-1"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>Intro to Computational Linguistics</item>
+    </one-of>
+    <item repeat="0-1">
+      <one-of>
+        <item>class</item>
+        <item>lecture</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="Courses_id">
+    <one-of>
+      <item weight="10"><item repeat="0-1">General Engineering</item>205</item>
+      <item weight="10"><item repeat="0-1">GEN ENG</item>205</item>
+      <item weight="10"><item repeat="0-1">EA 1</item>205</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>101</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>110</item>
+      <item weight="10"><item repeat="0-1">COG SCI</item>207</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>213</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>301</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>331</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>332</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>335</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>339</item>
+      <item weight="9"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>340</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>348</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>350</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>351-1</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>356</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>358</item>
+      <item weight="10"><item repeat="0-1">DTC</item>106</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>111</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>130</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>205</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>211</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>212</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>214</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>230</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>295</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>295</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>313</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>413</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>314</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>315</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>321</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>322</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>325</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>330</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>336</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>337</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>338</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>343</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>344</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>345</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>349</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>351-2</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>352</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>354</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>361</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>362</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>368</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>468</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>370</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>371</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>372</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>472</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>394</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>376</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>323</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>422</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>423</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>428</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>430</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>435</item>
+      <item weight="9"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>440</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>441</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>442</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>443</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>446</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>450</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>452</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>455</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>457</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>469</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>472</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>473-1</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>473-2</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>474</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>510</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>512</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>395</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>495</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>396</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>496</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>397</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>497</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>375</item>
+      <item weight="10"><item repeat="0-1"><one-of><item>CS</item><item>EECS</item></one-of></item>475</item>
+    </one-of>
+    <item repeat="0-1">
+      <one-of>
+        <item>lecture</item>
+      </one-of>
+    </item>
+  </rule>
+  <rule id="InquiryStarter">
+    <one-of>
+      <item>
+        Do you
+        <item repeat="0-1">happen to</item><one-of>
+          <item>have</item>
+          <item>know</item>
+        </one-of>
+      </item>
+      <item>
+        <one-of>
+          <item>Can</item>
+          <item>Could</item>
+          <item>Would</item>
+        </one-of>
+        you
+        <one-of>
+          <item>tell me</item>
+          <item>show me</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="PersonInquiryContentRelativeClauses">
+    <one-of>
+      <item>
+        where 
+        <one-of>
+          <item>to find</item>
+          <item>I can find</item>
+        </one-of>
+        <one-of>
+          <item><ruleref uri="#PersonReference" /></item>
+          <item><item repeat="0-1">the</item> <ruleref uri="#ObjectsOfInterest" /></item>
+        </one-of>
+      </item>
+      <item>
+        where 
+        <one-of>
+          <item><ruleref uri="#PersonReference" /> is</item>  
+          <item>
+            the
+            <one-of>
+              <item><ruleref uri="#SingularObjectsOfInterest"/> is</item>
+              <item><ruleref uri="#PluralObjectsOfInterest"/> are</item>
+            </one-of>
+            </item>
+        </one-of> 
+      </item>
+      <item>who the professor for <ruleref uri="#Course" /> is</item>
+      <item>who teaches <ruleref uri="#Course" /></item>
+    </one-of>
+  </rule>
+  <rule id="InquisitionOrder">
+    <one-of>
+      <item>
+        Show me 
+        <one-of>
+          <item><ruleref uri="#InquisitionOrderObject" /></item>
+          <item><ruleref uri="#InquisitionOrderRelativeClauses" /></item>
+        </one-of>
+      </item>
+      <item>
+        Tell me 
+        <one-of>
+          <item><ruleref uri="#InquisitionOrderRelativeClauses" /></item>
+          <item>about 
+            <one-of>
+              <item>
+                <item repeat="0-1">the</item>
+                <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+              </item>
+              <item><ruleref uri="#PersonReference" /></item>
+              <item>Mudd</item>
+              <item>this building</item>
+              <item>the building</item>
+              <item>the 
+                <item repeat="0-1">CS</item> 
+                division
+              </item>
+              <item>the 
+                <item repeat="0-1">CS</item> 
+                <one-of>
+                  <item>faculty</item>
+                  <item>faculties</item>
+                </one-of>
+              </item>
+              <item>it</item>
+            </one-of>
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+   </rule>
+  <rule id="InquisitionOrderObject">
+    <one-of>
+      <item>the map</item>
+      <item>
+        <ruleref uri="#ObjectPossessedByPerson" />
+      </item>
+      <item>
+        the
+        <one-of>
+          <item>
+            <ruleref uri="#SingularImmobileObjectOfInterest" />
+          </item>
+          <item>
+            <ruleref uri="#PluralImmobileObjectsOfInterest" />
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="InquisitionOrderRelativeClauses">
+    <one-of>
+      <item>where is <ruleref uri="#SingularSpecificPlace" /></item>  
+      <item>where <ruleref uri="#SingularSpecificPlace" />is</item>  
+      <item>
+        where is
+        <item repeat="0-1">the</item> 
+        <ruleref uri="#SingularImmobileObjectOfInterest" />
+      </item>  
+      <item>
+        where 
+        <item repeat="0-1">the</item> 
+        <ruleref uri="#SingularImmobileObjectOfInterest" />
+        is
+      </item> 
+      <item>
+        where are
+        <item repeat="0-1">the</item> 
+        <ruleref uri="#PluralImmobileObjectsOfInterest" />
+      </item>  
+      <item>
+        where 
+        <item repeat="0-1">the</item> 
+        <ruleref uri="#PluralImmobileObjectsOfInterest" />
+        are
+      </item>  
+    </one-of>
+  </rule>
+  <rule id="ObjectInquiryContent">
+    <one-of>
+      <item>
+        the map
+        <item repeat="0-1">
+          <one-of>
+            <item>of this building</item>
+            <item>of this floor</item>
+          </one-of>
+        </item>
+      </item>
+      <item>
+        <one-of>
+          <item>about</item>
+          <item>if there is</item>
+          <item>the time for</item>
+          <item>the host of</item>
+        </one-of>
+        <item repeat="0-1">
+          <one-of>
+            <item>a</item>
+            <item>the</item>
+          </one-of>
+        </item>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+      </item>
+      <item>
+        <ruleref uri="#ObjectPossessedByPerson" />
+        <item repeat="0-1">
+          <one-of>
+            <item>lying around</item>
+            <item>with you</item>
+          </one-of>
+        </item>
+      </item>
+      <item>
+        <one-of>
+          <item>if</item>
+          <item>whether</item>
+        </one-of>
+        <ruleref uri="#Course" />
+        is offered
+        <item repeat="0-1">
+          by
+          <item repeat="0-1">
+            <ruleref uri="#PersonReference" />
+          </item>
+        </item><item repeat="0-1">
+          <ruleref uri="#QuarterReference" />
+        </item>
+      </item>
+      <item>
+        <one-of>
+          <item>when</item>
+          <item>where</item>
+        </one-of>
+        <ruleref uri="#SingularEventMaybeTemporallyStampped" />
+        is
+      </item>
+      <item>
+        <item>where</item>
+        <ruleref uri="#ObjectPossessedByPerson" />
+        is
+      </item>
+      <item>
+        <one-of>
+          <item>the name of the professor for</item>
+          <item>the professor for</item>
+        </one-of>        
+        <ruleref uri="#Course" /><item repeat="0-1">
+          <ruleref uri="#QuarterReference" />
+        </item>
+      </item>
+      <item>
+        <one-of>
+          <item>
+            <one-of>
+              <item>the professor</item>
+              <item>the name of the professor</item>
+            </one-of>
+          </item>
+          <item>who is</item>
+          <item>
+            <one-of>
+              <item>the professor</item>
+              <item>the name of the professor</item>
+            </one-of>
+            who is
+          </item>
+          <item>
+            <one-of>
+              <item>whether</item>
+              <item>if</item>
+            </one-of>
+            <ruleref uri="#FacultyPostdocReference" />
+            is
+          </item>
+        </one-of>
+        teaching
+        <ruleref uri="#Course" />
+        <item repeat="0-1"><ruleref uri="#QuarterReference" /></item>        
+      </item>
+      <item><ruleref uri="#PersonOfPosition"/></item>
+      <item>
+        <one-of>
+          <item>who lectures</item>
+          <item>who teaches</item>
+        </one-of>
+        <ruleref uri="#Course" />
+        <item repeat="0-1">
+          <ruleref uri="#QuarterReference" />
+        </item>
+      </item>
+      <item>
+        <one-of>
+          <item>the host for</item>
+          <item>the host of</item>
+          <item>the time for</item>
+          <item>the time of</item>
+        </one-of>
+        <ruleref uri="#EventName" />
+        <item repeat="0-1">
+          <ruleref uri="#QuarterReference" />
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="PersonOfPosition">
+    <one-of>
+      <item>the Chair of the CS division</item>
+      <item>Director of 
+        <one-of>
+          <item>Undergraduate Studies</item>
+          <item>Graduate Studies</item>
+          <item>the M.S. AI program</item>
+        </one-of>
+      </item>
+      <item>
+        <one-of>
+          <item>the professor</item>
+          <item>the instructor</item>
+        </one-of>
+        <one-of>
+          <item>for</item>
+          <item>who is teaching</item>
+          <item>who teaches</item>
+          <item>teaching</item>
+        </one-of>
+        <ruleref uri="#Course" />
+        <item repeat="0-1">
+          <ruleref uri="#QuarterReference" />
+        </item>        
+      </item>
+    </one-of>
+  </rule>
+  <!-- name related -->
+  <rule id="PossessivePronoun">
+    <one-of>
+      <item>her</item>
+      <item>his</item>
+      <item>my</item>
+      <item>your</item>
+      <item>our</item>
+      <item>their</item>
+      <item>its</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleFacultyFirstName">
+    <one-of>
+      <!-- Faculty -->
+      <item weight="10">Brenna</item>
+      <item weight="10">Jennie</item>
+      <item weight="10">Eleanor</item>
+      <item weight="10">Nell</item>
+      <item weight="10">Elizabeth</item>
+      <item weight="10">Anne</item>
+      <item weight="10">Anne Marie</item>
+      <item weight="10">Sara</item>
+      <item weight="9">Sarah</item>
+      <item weight="10">Jessica</item>
+    </one-of>
+  </rule>
+  <rule id="MaleFacultyFirstName">
+    <one-of>
+      <item>Larry</item>
+      <item>Fabian</item>
+      <item>Simone</item>
+      <item>Yan</item>
+      <item>Oliver</item>
+      <item>Anindya</item>
+      <item>Christos</item>
+      <item>Peter</item>
+      <item>Douglas</item>
+      <item>Robby</item>
+      <item>Ken</item>
+      <item>Kenneth</item>
+      <item>Kristian</item>
+      <item>Jason</item>
+      <item>Thomas</item>
+      <item>Michael</item>
+      <item>Ian</item>
+      <item>Ming-Yang</item>
+      <item>Aleksandar</item>
+      <item>Han</item>
+      <item>Kotsya</item>
+      <item>Konstantin</item>
+      <item>Bryan</item>
+      <item>Chris</item>
+      <item>Jesse</item>
+      <item>Jack</item>
+      <item>Aravindan</item>
+      <item>Uri</item>
+      <item>Marcelo</item>
+      <item>Haoqi</item>
+      <item>Nabil</item>
+      <item>Randall</item>
+      <item>Alok</item>
+      <item>Darren</item>
+      <item>Ronen</item>
+      <item>Nikos</item>
+      <item>Brent</item>
+      <item>Russell</item>
+      <item>Aggelos</item>
+      <item>Han</item>
+      <item>Yuan</item>
+      <item>Gokhan</item>      
+      <item>Fabian</item>
+      <item>Oliver</item>
+      <item>Kristian</item>
+      <item>Jack</item>
+      <item>Aggelos</item>
+      <item>Vincent</item>
+      <item>Xiao</item>
+    </one-of>
+  </rule>
+  <rule id="MalePostdocFirstName">
+    <one-of>
+      <!-- Postdoc -->
+      <item>Willie</item>
+      <item>Jason</item>
+      <item>Huxley</item>
+      <item>Huck</item>
+      <item>Thomas</item>
+      <item>Tom</item>
+      <item>Xue</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleStaffFirstName">
+    <one-of>
+      <!-- staff -->
+      <item>Iliana</item>
+      <item>Brianna</item>
+      <item>Kim</item>
+      <item>Melissa</item>
+      <item>Katrina</item>
+      <item>Madeline</item>
+      <item>Maddy</item>
+    </one-of>
+  </rule>
+  <rule id="MaleStaffFirstName">
+    <one-of>
+      <item>Jeff</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleFacultyLastName">
+    <one-of>
+      <item>Argall</item>
+      <item>O'Rourke</item>
+      <item>Sood</item>
+      <item>Gerber</item>
+      <item>Piper</item>
+      <item>Rogers</item>
+      <item>Van Wart</item>
+      <item>Hullman</item>
+    </one-of>
+  </rule>
+  <rule id="MaleFacultyLastName">
+    <one-of>
+      <item weight="10">Birnbaum</item>
+      <item weight="10">Campanoni</item>
+      <item weight="10">Chen</item>
+      <item weight="10">De</item>
+      <item weight="10">Dimoulas</item>
+      <item weight="10">Dinda</item>
+      <item weight="10">Downey</item>
+      <item weight="10">Findler</item>
+      <item weight="10">Forbus</item>
+      <item weight="10">Hinrichs</item>
+      <item weight="10">Horn</item>
+      <item weight="10">Horswill</item>
+      <item weight="9">Kao</item>
+      <item weight="10">Kuzmanovic</item>
+      <item weight="10">Liu</item>
+      <item weight="10">Makarychev</item>
+      <item weight="10">Pardo</item>
+      <item weight="10">Riesbeck</item>
+      <item weight="10">Rubenstein</item>
+      <item weight="10">Tov</item>
+      <item weight="10">Vijayaraghavan</item>
+      <item weight="10">Wilensky</item>
+      <item weight="10">Worsley</item>
+      <item weight="10">Zhang</item>
+      <item weight="10">Alshurafa</item>
+      <item weight="10">Berry</item>
+      <item weight="10">Choudhary</item>
+      <item weight="10">Gergle</item>
+      <item weight="10">Gradwohl</item>
+      <item weight="10">Hardavellas</item>
+      <item weight="10">Hecht</item>
+      <item weight="10">Joseph</item>
+      <item weight="10">Liu</item>
+      <item weight="10">Luo</item>
+      <item weight="10">Memik</item>
+      <item weight="10">Bustamante</item>
+      <item weight="10">Cossairt</item>
+      <item weight="10">Hammond</item>
+      <item weight="10">Hartline</item>
+      <item weight="10">Tumblin</item>
+      <item weight="10">Katsaggelos</item>
+      <item weight="10">St. Amour</item>
+      <item weight="10">St-Amour</item>
+      <item weight="10">Wang</item>
+    </one-of>
+  </rule>
+  <rule id="FacultyLastName">
+    <one-of>
+      <item>
+        <ruleref uri="#FemaleFacultyLastName" />
+      </item>
+      <item>
+        <ruleref uri="#MaleFacultyLastName" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="FemaleStaffLastName">
+    <one-of>
+      <item>Mello</item>
+      <item>Kieras</item>
+      <item>Duong</item>
+      <item>Vargas</item>
+      <item>Hicks</item>
+      <item>Usher</item>
+    </one-of>
+  </rule>
+  <rule id="MaleStaffLastName">
+    <one-of>
+      <item>Stiers</item>
+    </one-of>
+  </rule>
+  <rule id="MalePostdocLastName">
+    <one-of>
+      <item>Wilson</item>
+      <item>Bennett</item>
+      <item>Bochynek</item>
+      <item>Chen</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleFacultyFullName">
+    <one-of>
+      <item>Brenna Argall</item>
+      <item>Nell O'Rourke</item>
+      <item>Eleanor O'Rourke</item>
+      <item>Sara Sood</item>
+      <item>Sara Owsley</item>
+      <item>Sara Owsley Sood</item>
+      <item>Elizabeth Gerber</item>
+      <item>Anne Marie Piper</item>
+      <item>Jennie Rogers</item>
+      <item>Sarah Van Wart</item>
+      <item>Jessica Hullman</item>
+    </one-of>
+  </rule>
+  <rule id="MaleFacultyFullName">
+    <one-of>
+      <item>Larry Birnbaum</item>
+      <item>Fabian E. Bustamante</item>
+      <item>Simone Campanoni</item>
+      <item>Yan Chen</item>
+      <item>Oliver S. Cossairt</item>
+      <item>Anindya De</item>
+      <item>Christos Dimoulas</item>
+      <item>Peter Dinda</item>
+      <item>Douglas Downey</item>
+      <item>Robby Findler</item>
+      <item>Ken Forbus</item>
+      <item>Kenneth D. Forbus</item>
+      <item>Kenneth Forbus</item>
+      <item>Kristian J. Hammond</item>
+      <item>Jason D. Hartline</item>
+      <item>Thomas Hinrichs</item>
+      <item>Mike Horn</item>
+      <item>Michael Horn</item>
+      <item>Ian Horswill</item>
+      <item>Ming-Yang Kao</item>
+      <item>Aleksandar Kuzmanovic</item>
+      <item>Han Liu</item>
+      <item>Kotsya Makarychev</item>
+      <item>Konstantin Makarychev</item>
+      <item>Bryan Pardo</item>
+      <item>Chris Riesbeck</item>
+      <item>Jennie M. Rogers</item>
+      <item>Mike Rubenstein</item>
+      <item>Michael Rubenstein</item>
+      <item>Jesse Tov</item>
+      <item>Jack E. Tumblin</item>
+      <item>Aravindan Vijayaraghavan</item>
+      <item>Uri Wilensky</item>
+      <item>Marcelo Worsley</item>
+      <item>Haoqi Zhang</item>
+      <item>Nabil Alshurafa</item>
+      <item>Randall Berry</item>
+      <item>Alok Choudhary</item>
+      <item>Darren Gergle</item>
+      <item>Ronen Gradwohl</item>
+      <item>Nikos Hardavellas</item>
+      <item>Brent Hecht</item>
+      <item>Russell Joseph</item>
+      <item>Aggelos K. Katsaggelos</item>
+      <item>Han Liu</item>
+      <item>Yuan Luo</item>
+      <item>Gokhan Memik</item>
+      <item>Fabian Bustamante</item>
+      <item>Oliver Cossairt</item>
+      <item>Kristian Hammond</item>
+      <item>Jason Hartline</item>
+      <item>Jack Tumblin</item>
+      <item>Aggelos Katsaggelos</item>
+      <item>Vincent St-Amour</item>
+      <item>Vincent St. Amour</item>
+      <item>Xiao Wang</item>
+    </one-of>
+  </rule>
+  <rule id="FacultyFullName">
+    <one-of>
+      <item>
+        <ruleref uri="#FemaleFacultyFullName" />
+      </item>
+      <item>
+        <ruleref uri="#MaleFacultyFullName" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="MalePostdocFullName">
+    <one-of>
+      <item>Willie Wilson</item>
+      <item>Jason Wilson</item>
+      <item>Huxley Bennett</item>
+      <item>Huck Bennett</item>
+      <item>Thomas Bochynek</item>
+      <item>Tom Bochynek</item>
+      <item>Xue Chen</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleStaffFullName">
+    <one-of>
+      <item>Brianna Mello</item>
+      <item>Kim Kieras</item>
+      <item>Melissa Duong</item>
+      <item>Iliana Vargas</item>
+      <item>Katrina Hicks</item>
+      <item>Madeline Usher</item>
+      <item>Maddy Usher</item>
+    </one-of>
+  </rule>
+  <rule id="MaleStaffFullName">
+    <one-of>
+      <item>Jeff Stiers</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleNickName">
+    <one-of>
+      <item>Nell</item>
+      <item>Maddy</item>
+    </one-of>
+  </rule>
+  <rule id="MaleNickName">
+    <one-of>
+      <item>Willie</item>
+      <item>Jack</item>
+      <item>Mike</item>
+      <item>Huck</item>
+      <item>Tom</item>
+    </one-of>
+  </rule>
+  <rule id="FemaleMiddleName">
+    <one-of>
+      <item>Owsley</item>
+      <item>Marie</item>
+    </one-of>
+  </rule>
+  <rule id="PersonReference">
+    <one-of>
+      <item>
+        <ruleref uri="#ExplicitPersonName" />
+      </item>
+      <item>
+        <ruleref uri="#TitledName" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="FacultyPostdocReference">
+    <one-of>
+      <item><ruleref uri="#ExplicitFacultyPostdocName" /></item>
+      <item><ruleref uri="#FacultyPostdocTitledName" /></item>
+    </one-of>
+  </rule>
+  <rule id="ExplicitPersonName">
+    <one-of>
+      <item><ruleref uri="#ExplicitFacultyPostdocName" /></item>
+      <item><ruleref uri="#FemaleStaffFirstName" /></item>
+      <item><ruleref uri="#MaleStaffFirstName" /></item>
+      <item><ruleref uri="#FemaleStaffFullName" /></item>
+      <item><ruleref uri="#MaleStaffFullName" /></item>
+    </one-of>
+  </rule>
+  <rule id="ExplicitFacultyPostdocName">
+    <one-of>
+      <item><ruleref uri="#FemaleFacultyFirstName" /></item>
+      <item><ruleref uri="#MaleFacultyFirstName" /></item>
+      <item><ruleref uri="#MalePostdocFirstName" /></item>
+      <item><ruleref uri="#FemaleFacultyFullName" /></item>
+      <item><ruleref uri="#MaleFacultyFullName" /></item>
+      <item><ruleref uri="#MalePostdocFullName" /></item>
+    </one-of>
+  </rule>
+  <rule id="FemalePersonReference">
+    <one-of>
+      <item><ruleref uri="#FemaleFacultyFirstName" /></item>
+      <item>Professor 
+        <one-of>
+          <item><ruleref uri="#FemaleFacultyLastName" /></item>
+          <item><ruleref uri="#FemaleFacultyFullName" /></item>
+        </one-of>
+      </item>
+      <item>Ms. <ruleref uri="#FemaleStaffLastName" /></item>
+    </one-of>
+  </rule>
+  <rule id="MalePersonReference">
+    <one-of>
+      <item><ruleref uri="#MaleFacultyFirstName" /></item>
+      <item>Professor 
+        <one-of>
+          <item><ruleref uri="#MaleFacultyLastName" /></item>
+          <item><ruleref uri="#MaleFacultyFullName" /></item>
+          <item><ruleref uri="#MalePostdocFirstName" /></item>  
+          <item><ruleref uri="#MalePostdocFullName" /></item>
+        </one-of>
+      </item>
+      <item>Doctor
+        <one-of>
+          <item><ruleref uri="#MalePostdocFirstName" /></item>  
+          <item><ruleref uri="#MalePostdocFullName" /></item>
+        </one-of>
+      </item>
+      <item>Mr. <ruleref uri="#MaleStaffLastName" /></item>
+    </one-of>
+  </rule>
+  <rule id="FacultyPostdocTitledName">
+    <one-of>
+      <item>
+        Professor
+        <one-of>
+          <item><ruleref uri="#FacultyLastName" /></item>
+          <item><ruleref uri="#FacultyFullName" /></item>
+          <item><ruleref uri="#MalePostdocLastName" /></item>
+          <item><ruleref uri="#MalePostdocFullName" /></item>
+        </one-of>
+      </item>
+      <item>
+        Doctor
+        <one-of>
+          <item><ruleref uri="#MalePostdocLastName" /></item>
+          <item><ruleref uri="#MalePostdocFullName" /></item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="TitledName">
+    <one-of>
+      <item><ruleref uri="#FacultyPostdocTitledName" /></item>
+      <item>
+        Ms.
+        <one-of>
+          <item>
+            <ruleref uri="#FemaleStaffLastName" />
+          </item>
+          <item>
+            <ruleref uri="#FemaleStaffFullName" />
+          </item>
+        </one-of>
+      </item>
+      <item>
+        Mr.
+        <one-of>
+          <item>
+            <ruleref uri="#MaleStaffLastName" />
+          </item>
+          <item>
+            <ruleref uri="#MaleStaffFullName" />
+          </item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  
+  <!-- Numbers -->
+  <rule id="Three_digit_number">
+    <one-of>
+      <item>
+        <ruleref uri="#OneToNine" /> hundred
+      </item>
+      <item>
+        <ruleref uri="#OneToNine" /> o <ruleref uri="#OneToNine" />
+      </item>
+      <item>
+        <ruleref uri="#OneToNine" />
+        <ruleref uri="#TenToNinetyNine" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="OfficeNumber">
+    <one-of>
+      <item>
+        <ruleref uri="#OneToFive" />
+        <ruleref uri="#ZeroToNine" /><ruleref uri="#ZeroToNine" /><ruleref uri="#ZeroToNine" />
+      </item>
+      <item>
+        <ruleref uri="#TenToFiftyNine" />
+        <ruleref uri="#ZeroToNine" />
+        <ruleref uri="#ZeroToNine" />
+      </item>
+      <item>
+        <ruleref uri="#TenToFiftyNine" />
+        <ruleref uri="#TenToNinetyNine" />
+      </item>
+      <item>
+        three thousand 
+        <item repeat="0-1">
+          and <ruleref uri="#OneToNine" />
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="Zero">
+    <one-of>
+      <item>zero</item>
+      <item>o</item>
+    </one-of>
+  </rule>
+  <rule id="ZeroToNinetyNine">
+    <one-of>
+      <item>
+        <ruleref uri="#Zero" />
+      </item>
+      <item>
+        <ruleref uri="#OneToNine" />
+      </item>
+      <item>
+        <ruleref uri="#TenToNineteen" />
+      </item>
+      <item>
+        <ruleref uri="#TwentyToNinety" />
+        <item repeat="0-1">
+          <ruleref uri="#OneToNine" />
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="TenToFiftyNine">
+    <one-of>
+      <item>
+        <ruleref uri="#TenToNineteen" />
+      </item>
+      <item>
+        <ruleref uri="#TwentyToFifty" />
+        <item repeat="0-1">
+          <ruleref uri="#OneToNine" />
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="TenToNinetyNine">
+    <one-of>
+      <item>
+        <ruleref uri="#TenToNineteen" />
+      </item>
+      <item>
+        <ruleref uri="#TwentyToNinety" />
+        <item repeat="0-1">
+          <ruleref uri="#OneToNine" />
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="ZeroToNine">
+    <one-of>
+      <item>
+        <ruleref uri="#Zero" />
+      </item>
+      <item>
+        <ruleref uri="#OneToNine" />
+      </item>
+    </one-of>
+  </rule>
+  <rule id="OneToFive">
+    <one-of>
+      <item>one</item>
+      <item>two</item>
+      <item>three</item>
+      <item>four</item>
+      <item>five</item>
+    </one-of>
+  </rule>
+  <rule id="OneToNine">
+    <one-of>
+      <item><ruleref uri="#OneToFive" /></item>
+      <item>six</item>
+      <item>seven</item>
+      <item>eight</item>
+      <item>nine</item>
+    </one-of>
+  </rule>
+  <rule id="OneToTwentyThree">
+    <one-of>
+      <item>
+        <ruleref uri="#OneToNine" />
+      </item>
+      <item>
+        <ruleref uri="#TenToNineteen" />
+      </item>
+      <item>
+        twenty
+        <item repeat="0-1">
+          <one-of>
+            <item>one</item>
+            <item>two</item>
+            <item>three</item>
+          </one-of>
+        </item>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="TenToNineteen">
+    <one-of>
+      <item>ten</item>
+      <item>eleven</item>
+      <item>twelve</item>
+      <item>thirteen</item>
+      <item>fourteen</item>
+      <item>fifteen</item>
+      <item>sixteen</item>
+      <item>seventeen</item>
+      <item>eighteen</item>
+      <item>nineteen</item>
+    </one-of>
+  </rule>
+  <rule id="TwentyToFifty">
+    <one-of>
+      <item>twenty</item>
+      <item>thirty</item>
+      <item>forty</item>
+      <item>fifty</item>
+    </one-of>
+  </rule>
+  <rule id="TwentyToNinety">
+    <one-of>
+      <item><ruleref uri="#TwentyToFifty"/></item>
+      <item>sixty</item>
+      <item>seventy</item>
+      <item>eighty</item>
+      <item>ninety</item>
+    </one-of>
+  </rule>
+  <!-- Less important stuff -->
+  <rule id="Greeting">
+    <one-of>
+      <item>Hello</item>
+      <item>Hi</item>
+      <item>Greetings</item>
+      <item>
+        Good
+        <one-of>
+          <item>morning</item>
+          <item>afternoon</item>
+          <item>evening</item>
+          <item>day</item>
+          <item>night</item>
+        </one-of>
+      </item>
+      <item>How are you</item>
+      <item>What's up</item>
+      <item>'sup</item>
+    </one-of>
+  </rule>
+  <rule id="Interjection">
+    <one-of>
+      <item>okay</item>
+      <item>hm</item>
+      <item>um</item>
+      <item>ah</item>
+      <item>cool</item>
+      <item>huh?</item>
+      <item>wow!</item>
+      <!--<item>huck you</item>-->
+    </one-of>
+  </rule>
+  <rule id="WrapUp">
+    <one-of>
+      <item>Thank you</item>
+      <item>Good bye</item>
+      <item>bye bye</item>
+      <item>bye</item>
+      <item>talk to you later</item>
+    </one-of>
+  </rule>
+  <rule id="Command">
+    <one-of>
+      <item>Reload grammars</item>
+    </one-of>
+  </rule>
+  <rule id="EasterEggs">
+    <one-of>
+      <item>Beam me up, Scotty!</item>
+      <item>Huck you</item>
+      <item>Say something</item>
+      <item>What is the meaning of life?</item>
+      <item>
+        May the force be with you, <ruleref uri="#PersonReference" />
+      </item>
+      <item>I've; see-een, thingss, you people wouldn't belee-eeve.</item>
+      <item>Attack ships on fye-err off, shoulder of-oh ryon.</item>
+      <item>I watched C beams; glitter in the dark near the Tannhäuser Gate.</item>
+      <item>All those, moments; will be lost; in time; like; tears; in rain</item>
+      <item>Dead or alive, you're coming with me</item>
+      <item>Aravindan Chris Kris Ian</item>
+    </one-of>
+  </rule>
+  <rule id="SingularImmobileObjectOfInterest">
+    <one-of>
+      <item>printer</item>
+      <item>printing machine</item>
+      <item>copier</item>
+      <item>copying machine</item>
+      <item>coffee machine</item>
+      <item>Nespresso</item>
+      <item>Nespresso machine</item>
+      <item>water fountain</item>
+      <item>vending machine</item>
+    </one-of>  
+  </rule>
+  <rule id="PluralImmobileObjectsOfInterest">
+    <one-of>
+      <item>computers</item>
+      <item>printers</item>
+      <item>printing machines</item>
+      <item>copiers</item>
+      <item>copying machines</item>
+      <item>coffee machines</item>
+      <item>Nespressos</item>
+      <item>Nespresso machine</item>
+      <item>water fountains</item>
+      <item>vending machines</item>
+    </one-of>  
+  </rule>
+  <rule id="SingularObjectsOfInterest">
+    <one-of>
+      <item>a snack</item>
+      <item>
+        <one-of>
+          <item>a</item>
+          <item>the</item>
+        </one-of>       
+        <one-of>
+          <item><ruleref uri="#SingularImmobileObjectOfInterest"/></item>
+          <item>
+            cup of 
+            <one-of>
+              <item>coffee</item>
+              <item>tea</item>
+            </one-of>
+          </item>
+        </one-of>
+      </item>
+    </one-of>    
+  </rule>
+  <rule id="PluralObjectsOfInterest">
+    <one-of>
+      <item>
+        <item repeat="0-1">the</item> 
+        <one-of>
+          <item><ruleref uri="#PluralImmobileObjectsOfInterest"/></item>
+        </one-of>
+      </item>
+      <item>
+        <item repeat="0-1">some</item>
+        snacks
+      </item>
+      <item>
+        <one-of>
+          <item>some</item>
+          <item>a few</item>
+        </one-of>
+        <one-of>
+          <item>pens</item>
+          <item>markers</item>
+        </one-of>
+      </item>
+      <item>
+        <item>a few</item>
+        <one-of>
+          <item>sheets of paper</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="UncountableObjectsOfInterest">
+    <one-of> 
+      <item>
+        <item repeat="0-1">some</item>        
+        <one-of>
+          <item><item repeat="0-1">free</item>food</item>
+          <item><item repeat="0-1">free</item>pizza</item>
+          <item>coffee</item>
+          <item>Nespresso</item>
+          <item>tea</item>
+          <item>ice cream</item>
+          <item>water</item>
+          <item>paper</item>
+        </one-of>
+      </item>
+    </one-of>
+  </rule>
+  <rule id="ObjectsOfInterest">
+    <one-of>
+      <item><ruleref uri="#SingularObjectsOfInterest" /></item>
+      <item><ruleref uri="#PluralObjectsOfInterest" /></item>
+      <item><ruleref uri="#UncountableObjectsOfInterest" /></item>
+      <item>something to eat</item>
+    </one-of>
+  </rule>
+  <rule id="Shuttle">
+    <one-of>
+      <item>
+        <item repeat="0-1">
+          <one-of>
+            <item>Northbound</item>
+            <item>Southbound</item>
+          </one-of>
+        </item>
+        <one-of>
+          <item>intercampus</item>
+          <item>intercampus shuttle</item>
+          <item>shuttle</item>
+          <item>201</item>
+          <item>201 bus</item>
+          <item>Evanston Loop</item>
+          <item>Campus Loop</item>
+        </one-of>
+      </item>
+      <item>
+        <one-of>
+          <item>intercampus</item>
+          <item>intercampus shuttle</item>
+          <item>shuttle</item>
+          <item>201</item>
+          <item>201 bus</item>
+          <item>Evanston Loop</item>
+          <item>Campus Loop</item>
+        </one-of>
+        <one-of>
+          <item>going <one-of><item>north</item><item>south</item></one-of></item>
+          <item>
+            to
+            <one-of>
+              <item>Downtown Chicago</item>
+              <item>South Campus</item>
+              <item>the Chicago Campus</item>
+              <item>Chicago Campus</item>
+              <item>Chicago</item>
+            </one-of>
+          </item>
+        </one-of>        
+      </item>
+    </one-of>
+  </rule>
+  <!-- Unused -->
+  <rule id="LunchPickUp">
+    <item repeat="0-1">
+      <one-of>
+        <item>my</item>
+        <item>my friend's</item>
+        <item>
+          <ruleref uri="#EnglishArticle" />
+        </item>
+      </one-of>
+    </item>
+    <one-of>
+      <item>Krishna</item>
+      <item>ChowBus</item>
+      <item>527</item>
+    </one-of>
+    <item repeat="0-1">
+      <one-of>
+        <item>lunch</item>
+        <item>delivery</item>
+        <item>meal</item>
+        <item>lunch box</item>
+      </one-of>
+    </item>
+  </rule>
+</grammar>

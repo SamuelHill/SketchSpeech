@@ -1,0 +1,366 @@
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SketchSpeech.exe.config
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SketchSpeech.exe
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SketchSpeech.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ValueTuple.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\netstandard.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.AppContext.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.Concurrent.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.NonGeneric.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.Specialized.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ComponentModel.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ComponentModel.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Console.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Data.Common.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Contracts.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Debug.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Process.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Tools.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Tracing.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Drawing.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Dynamic.Runtime.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Globalization.Calendars.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Globalization.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Globalization.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.Compression.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.IsolatedStorage.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.Pipes.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Linq.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Linq.Expressions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Linq.Parallel.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Linq.Queryable.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Http.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.NameResolution.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.NetworkInformation.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Ping.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Requests.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Security.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Sockets.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.WebSockets.Client.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.WebSockets.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.ObjectModel.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Reflection.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Reflection.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Reflection.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Resources.Reader.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Resources.ResourceManager.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Resources.Writer.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Handles.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.InteropServices.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Numerics.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Claims.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.Principal.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Security.SecureString.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Text.Encoding.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Text.RegularExpressions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.Overlapped.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.Tasks.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.Thread.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.ThreadPool.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Threading.Timer.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.ReaderWriter.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.XDocument.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.XmlDocument.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.XmlSerializer.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.XPath.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\KioskSharedObjects.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\log4net.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\MathNet.Numerics.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\MathNet.Spatial.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.Face.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Calibration.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.IL.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Face.Windows.x64.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Language.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media.Windows.x64.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Client.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Newtonsoft.Json.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.Immutable.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Drawing.Common.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Http.Extensions.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Http.Primitives.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Numerics.Vectors.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\websocket-sharp.dll
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\KioskSharedObjects.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\log4net.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\MathNet.Numerics.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\MathNet.Spatial.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.Face.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Calibration.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.IL.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Face.Windows.x64.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Language.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media.Windows.x64.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Client.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\Newtonsoft.Json.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.pdb
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Collections.Immutable.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Http.Extensions.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Net.Http.Primitives.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\System.Numerics.Vectors.xml
+C:\qrg\kiosk\front-end\SketchSpeech\bin\Debug\websocket-sharp.xml
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.csprojAssemblyReference.cache
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.exe.config
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\Interop.DNSTools.dll
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.ResolveComReference.cache
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.CoreCompileInputs.cache
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.CopyComplete
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.exe
+C:\qrg\kiosk\front-end\SketchSpeech\obj\Debug\SketchSpeech.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SketchSpeech.exe.config
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SketchSpeech.exe
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SketchSpeech.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ValueTuple.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\netstandard.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.AppContext.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.Specialized.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ComponentModel.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Console.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Data.Common.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Globalization.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.Compression.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.Pipes.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Linq.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Linq.Expressions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Linq.Parallel.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Linq.Queryable.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Http.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.NameResolution.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Ping.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Requests.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Security.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Sockets.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.WebSockets.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.ObjectModel.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Reflection.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Resources.Reader.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Resources.Writer.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Handles.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Claims.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.Principal.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Security.SecureString.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Text.Encoding.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.Tasks.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.Thread.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Threading.Timer.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.XDocument.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.XPath.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\KioskSharedObjects.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\log4net.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\MathNet.Numerics.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\MathNet.Spatial.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.Face.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Calibration.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.IL.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Face.Windows.x64.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Language.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media.Windows.x64.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Client.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.Immutable.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Drawing.Common.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\websocket-sharp.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\KioskSharedObjects.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\log4net.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\MathNet.Numerics.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\MathNet.Spatial.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Kinect.Face.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Audio.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Calibration.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Extensions.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.IL.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Imaging.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Face.Windows.x64.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Kinect.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Language.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media.Windows.x64.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Media_Interop.Windows.x64.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Speech.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Client.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Microsoft.Psi.Visualization.Common.Windows.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Direct3D9.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.DXGI.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.Mathematics.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.pdb
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\SharpDX.MediaFoundation.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Collections.Immutable.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\bin\Debug\websocket-sharp.xml
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.csprojAssemblyReference.cache
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.exe.config
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\Interop.DNSTools.dll
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.ResolveComReference.cache
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.CoreCompileInputs.cache
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.csproj.CopyComplete
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.exe
+C:\Users\Samuel Hill\Sync\front-end\SketchSpeech\obj\Debug\SketchSpeech.pdb

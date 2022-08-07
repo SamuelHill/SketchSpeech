@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EC9F0D0-A991-4A60-AF54-D62C08A8C5D1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NU.Kiosk</RootNamespace>
+    <AssemblyName>SketchSpeech</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>NU.Kiosk.SketchSpeechProgram</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.20.2.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Signed.3.20.2\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Spatial, Version=0.4.0.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Spatial.Signed.0.4.0\lib\net40\MathNet.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Kinect.2.0.1410.19000\lib\net45\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Kinect.Face, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Kinect.Face.x64.2.0.1410.19000\lib\net45\Microsoft.Kinect.Face.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Runtime.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Audio, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Audio.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Audio.Windows, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Audio.Windows.0.6.48.2-beta\lib\net47\Microsoft.Psi.Audio.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Calibration.Windows, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Calibration.Windows.0.6.48.2-beta\lib\net47\Microsoft.Psi.Calibration.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Extensions, Version=0.3.16.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Visualization.Windows.0.3.16.5-beta\lib\net47\Microsoft.Psi.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.IL, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Runtime.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.IL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Imaging, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Imaging.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Imaging.Windows, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Imaging.Windows.0.6.48.2-beta\lib\net47\Microsoft.Psi.Imaging.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Kinect.Face.Windows.x64, Version=0.6.48.2, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Psi.Kinect.Face.Windows.x64.0.6.48.2-beta\lib\net47\Microsoft.Psi.Kinect.Face.Windows.x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Kinect.Windows, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Kinect.Windows.0.6.48.2-beta\lib\net47\Microsoft.Psi.Kinect.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Language, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Language.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.Language.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Media.Windows.x64, Version=0.6.48.2, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.6.48.2-beta\lib\net47\Microsoft.Psi.Media.Windows.x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Media_Interop.Windows.x64, Version=0.6.48.2, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Psi.Media.Windows.x64.0.6.48.2-beta\lib\net47\Microsoft.Psi.Media_Interop.Windows.x64.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Speech, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Speech.0.6.48.2-beta\lib\netstandard2.0\Microsoft.Psi.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Speech.Windows, Version=0.6.48.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Speech.Windows.0.6.48.2-beta\lib\net47\Microsoft.Psi.Speech.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Visualization.Client.Windows, Version=0.3.16.5, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Microsoft.Psi.Visualization.Windows.0.3.16.5-beta\lib\net47\Microsoft.Psi.Visualization.Client.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Psi.Visualization.Common.Windows, Version=0.3.16.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Psi.Visualization.Windows.0.3.16.5-beta\lib\net47\Microsoft.Psi.Visualization.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SharpDX, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.4.2.0\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Direct3D9.4.2.0\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.DXGI.4.2.0\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.Mathematics.4.2.0\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpDX.MediaFoundation.4.2.0\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="websocket-sharp, Version=1.0.2.59611, Culture=neutral, PublicKeyToken=5660b08a1845a91e, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DragonConsumerProducer\DragonSpeechRecognizerClient.cs" />
+    <Compile Include="DragonConsumerProducer\IAudioStreamReceiver.cs" />
+    <Compile Include="DragonConsumerProducer\ISpeechRecResultAndEventsReceiver.cs" />
+    <Compile Include="DragonConsumerProducer\SpeechRecResultAndEventsReceiver.cs" />
+    <Compile Include="DragonProducer\DragonSpeechRecognitionResultReceiver.cs" />
+    <Compile Include="DragonProducer\DragonTextPreprocessor.cs" />
+    <Compile Include="DragonProducer\DragonTextSpeechSynthesizer.cs" />
+    <Compile Include="DragonProducer\IPipeUtilUsers.cs" />
+    <Compile Include="DragonProducer\PipeListener.cs" />
+    <Compile Include="DragonProducer\PipeSender.cs" />
+    <Compile Include="DragonProducer\SpeechMerger.cs" />
+    <Compile Include="DragonProducer\StreamString.cs" />
+    <Compile Include="Kqml.cs" />
+    <Compile Include="SketchingResponder.cs" />
+    <Compile Include="SketchingInputTextPreProcessor.cs" />
+    <Compile Include="SketchSpeechProgram.cs" />
+    <Compile Include="Sockets.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KioskSharedObjects\KioskSharedObjects.csproj">
+      <Project>{A344CE56-7B02-46CD-8B8D-6FEBC1E14606}</Project>
+      <Name>KioskSharedObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="DNSTools">
+      <Guid>{5C486340-2F92-11D1-A47C-00A024A3A678}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y "$(ProjectDir)..\KioskSpeech\KioskSpeech\Resources\*" "$(ProjectDir)$(OutDir)Resources\"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+</Project>

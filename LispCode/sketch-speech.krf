@@ -1,0 +1,47 @@
+(in-microtheory SketchSpeechArchiveMt)
+(genlMt SketchSpeechArchiveMt HTNPlanner)
+(genlMt Session-ReasonerPlanMt SketchSpeechArchiveMt)
+
+(preconditionForMethod
+  (currentInteractionMgr ?im)
+  (methodForAction
+    (sketchingUtterance ?string)
+    (actionSequence (TheList
+      ; Can do the clear-wm equivalent hear, not sure if needed anymore
+      ; (doClearWorkingMemory)
+      (doRemoteAgentPlan ?im
+        (actionSequence (TheList
+          (sketchingUtterance ?string))))))))
+
+(isa sketchingUtterance ComplexActionPredicate)
+(arity sketchingUtterance 1)
+(arg1Isa sketchingUtterance CharacterString)
+
+(in-microtheory SketchSpeechInterfaceMt)
+(genlMt SketchSpeechInterfaceMt HTNPlanner)
+(genlMt Interaction-ManagerPlanMt SketchSpeechInterfaceMt)
+
+(isa choicesOfSentence Predicate)
+(arity choicesOfSentence 2)
+(arg1Isa choicesOfSentence CycLTerm)
+(arg2Isa choicesOfSentence List)
+
+(preconditionForMethod
+  (and (currentUser ?user)
+       (outsourcedOnly (nounChoices ?string ?choices))
+       (outsourcedOnly (currentTime ?time))
+       (outsourcedOnly (currentDiscourseId ?discourse-id)))
+    (methodForAction
+      (sketchingUtterance ?string)
+      (actionSequence (TheList
+        (doRecordMembers
+          (TheSet
+           (ist-Information SketchSpeechInterfaceMt (userUtteranceAt ?time ?discourse-id ?string))
+           (ist-Information SketchSpeechInterfaceMt (isa ?discourse-id CommunicationAct-Single))
+           (ist-Information SketchSpeechInterfaceMt (senderOfInfo ?discourse-id ?user))
+           (ist-Information SketchSpeechInterfaceMt (choicesOfSentence ?discourse-id ?choices))))
+        (doAnnounce "~&Choices: ~a" (?choices))))))
+
+(isa sketchingUtterance ComplexActionPredicate)
+(arity sketchingUtterance 1)
+(arg1Isa sketchingUtterance CharacterString)
